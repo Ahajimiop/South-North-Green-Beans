@@ -1,0 +1,118 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- viewport tag makes the page fit phone screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zhang HaoTian | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- NAVIGATION: each link jumps to the section with the matching id -->
+  <header class="site-header">
+    <a class="logo" href="#home">Zhang HaoTian</a>
+    <nav>
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="hero">
+      <div class="hero-text">
+        <h1>I capture everyday details with photos and videos.</h1>
+        <p>Hi, I'm Zhang HaoTian, a second-year BDM student who loves taking photos and making videos.</p>
+        <a class="btn" href="#work">See my work</a>
+      </div>
+      <img src="images/selfphoto.png" alt="Photo of Zhang HaoTian">
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <h2>About me</h2>
+      <p class="intro">I am a student from China who is studying Digital Media at INTI International University. I like movies and video games</p>
+      <div class="cards">
+       <article class="card">
+  <!-- icon 1: camera -->
+  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5"/></svg>
+  <h3>Photography</h3>
+  <p>I shoot landscapes and animals, and I like catching small details of everyday life. People are still my weak spot.</p>
+</article>
+<article class="card">
+  <!-- icon 2: video -->
+  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M10 9.5v5l4.5-2.5z"/></svg>
+  <h3>Video editing</h3>
+  <p>I can make simple advertisement videos and public awareness videos.</p>
+</article>
+<article class="card">
+  <!-- icon 3: pencil -->
+  <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l3.5-1 12-12-2.5-2.5-12 12L3 21zM15 5l2.5 2.5"/></svg>
+  <h3>Copywriting</h3>
+  <p>I use words to describe feelings, so readers connect with the story.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- WORK (Products / Services) -->
+    <section id="work" class="section alt">
+      <h2>My work</h2>
+      <div class="cards">
+        <article class="card">
+          <img src="images/singapore.png" alt="Escalator tunnel with a blue sky at the end">
+          <h3>The Journey Begins</h3>
+	<p class="place">Singapore · Spring 2024</p>
+          <p>"Every journey begins with a step, and this one led me to a world of excitement."</p>
+        </article>
+        <article class="card">
+          <img src="images/guangzhou.png" alt="Covered walkway and stairs surrounded by green plants under a blue sky">
+          <h3>A Summer in Guangzhou</h3>
+	<p class="place">Guangzhou · Summer 2025</p>
+          <p>"The summer heat was intense, but everything around me was full of life and green."</p>
+        </article>
+        <article class="card">
+          <img src="images/Qingdao.png" alt="One boat on sea">
+          <h3>Stories by the Sea</h3>
+	<p class="place">Qingdao · Autumn 2023</p>
+          <p>"We all come to the sea for different reasons, carrying stories that only we know."</p>
+        </article>
+      </div>
+
+      <h3 class="video-title">One video that I made</h3>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/wCOmEyGsL1w" title="A video I made" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+    </section>
+
+    <!-- CONTACT: display-only form, nothing is sent -->
+    <section id="contact" class="section">
+      <h2>Contact me</h2>
+      <p id="form-note">Demo form only. Messages are not sent.</p>
+      <form class="form" aria-describedby="form-note">
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+
+        <label for="msg">Message</label>
+        <textarea id="msg" name="msg" rows="5"></textarea>
+
+        <button class="btn" type="button" disabled>Send message (demo only)</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 Zhang HaoTian. ICT2215 Assessment 2.</p>
+  </footer>
+
+</body>
+</html>
