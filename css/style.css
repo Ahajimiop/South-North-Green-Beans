@@ -1,0 +1,68 @@
+/* 1. COLOUR + FONT VARIABLES: change a colour here and it updates everywhere */
+:root {
+  --ink: #1F2A44;      /* dark text, header */
+  --paper: #F7F7F5;    /* page background */
+  --sand: #E9E6DC;     /* alternate section background */
+  --teal: #0F7C7A;     /* links, icons */
+  --gold: #F2B705;     /* buttons (high contrast with ink) */
+  --head: "Space Grotesk", Arial, sans-serif;
+  --body: "Source Sans 3", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+body { margin: 0; font-family: var(--body); font-size: 1.1rem; line-height: 1.6; color: var(--ink); background: var(--paper); }
+h1, h2, h3 { font-family: var(--head); line-height: 1.2; margin: 0 0 .5em; }
+h1 { font-size: 2.6rem; }
+h2 { font-size: 2rem; }
+img { max-width: 100%; height: auto; display: block; }  /* images shrink to fit the screen */
+
+/* 2. HEADER + NAVIGATION */
+.site-header { position: sticky; top: 0; z-index: 10; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: .5rem; padding: .8rem 1.2rem; background: var(--ink); }
+.logo { font-family: var(--head); font-weight: 700; font-size: 1.3rem; color: var(--gold); text-decoration: none; }
+.menu { list-style: none; display: flex; flex-wrap: wrap; gap: 1.2rem; margin: 0; padding: 0; }
+.menu a { color: var(--paper); text-decoration: none; }
+.menu a:hover { color: var(--gold); }
+
+/* 3. SECTIONS (same padding = repetition) */
+.section { padding: 3.5rem 1.2rem; max-width: 1000px; margin: 0 auto; }
+.alt { max-width: none; background: var(--sand); }
+.alt > * { max-width: 1000px; margin-left: auto; margin-right: auto; }
+.intro { max-width: 60ch; }
+
+/* 4. HERO */
+.hero { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: center; max-width: 1000px; margin: 0 auto; padding: 3.5rem 1.2rem; }
+.hero img { border-radius: 12px; }
+
+/* 5. CARDS */
+.cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.2rem; margin-top: 1.5rem; }
+.card { background: #fff; padding: 1.2rem; border-radius: 12px; }
+.card img { border-radius: 8px; margin-bottom: .8rem; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; }
+.place { font-size: .8rem; color: #5b6478; margin: 0 0 .4rem; }
+.card .place + p { font-style: italic; }
+.icon { width: 40px; height: 40px; fill: none; stroke: var(--teal); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; margin-bottom: .5rem; }
+
+/* 6. VIDEO: keeps a 16:9 shape and shrinks on phones */
+.video-title { margin-top: 2.5rem; }
+.video { position: relative; aspect-ratio: 16 / 9; }
+.video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; border-radius: 12px; }
+
+/* 7. BUTTONS + FORM */
+.btn { display: inline-block; padding: .7rem 1.4rem; background: var(--gold); color: var(--ink); font-family: var(--head); font-weight: 700; font-size: 1rem; border: 0; border-radius: 8px; text-decoration: none; cursor: pointer; }
+.btn:hover { background: var(--ink); color: var(--gold); }
+.btn:disabled, .btn:disabled:hover { background: var(--gold); color: var(--ink); opacity: .65; cursor: not-allowed; }
+.form { display: grid; gap: .5rem; max-width: 500px; }
+.form label { font-weight: 600; }
+.form input, .form textarea { width: 100%; padding: .6rem; font: inherit; border: 2px solid var(--sand); border-radius: 8px; }
+.form input:focus, .form textarea:focus { outline: 3px solid var(--teal); }
+.form .btn { justify-self: start; margin-top: .5rem; }
+
+.site-footer { background: var(--ink); color: var(--paper); text-align: center; padding: 1.2rem; }
+.site-footer p { margin: 0; }
+
+/* 8. RESPONSIVE: on screens under 700px, stack the hero and shrink headings */
+@media (max-width: 700px) {
+  .hero { grid-template-columns: 1fr; }
+  h1 { font-size: 2.1rem; }
+  h2 { font-size: 1.7rem; }
+}
